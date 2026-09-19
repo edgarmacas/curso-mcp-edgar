@@ -1,0 +1,22 @@
+[project]
+name = "temperature-converter"
+version = "0.1.0"
+description = "Conversor bidireccional de temperatura entre Celsius, Fahrenheit y Kelvin"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
+
+[project.scripts]
+convert-temp = "temperature_converter.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0.0",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/temperature_converter"]
