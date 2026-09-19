@@ -1,0 +1,8 @@
+[run]
+omit =
+    app/main.py
+    app/mcp/*
+    app/logging_config.py
+
+[report]
+show_missing = True
