@@ -1,0 +1,7 @@
+{
+  "gate-tests": {
+    "Stop": [
+      { "type": "command", "command": "./hooks/gate-tests.sh", "timeout": 30 }
+    ]
+  }
+}
