@@ -1,24 +1,3 @@
-# Environment Check — Class 1
-
-| Component | Status | Detail |
-| :--- | :---: | :--- |
-| **Python 3.12** | `OK` | 3.12.3 |
-| **uv** | `OK` | uv 0.11.7 (x86_64-unknown-linux-gnu) |
-| **Git** | `OK` | git version 2.43.0 |
-| **Docker** | `OK` | Docker version 29.7.2, build a7dcaa6 |
-| **.gitignore protects .env** | `OK` | protects `.env` |
-
-> **Status:** Environment ready. See you in Class 2.
-
----
-
-## Clase 2 — APIs de IA Generativa y memoria conversacional
-
-### Conversación de 8 turnos (Paso 7)
-
-Ver evidencia en [`entregas/s02/evidencia/memoria.png`](entregas/s02/evidencia/memoria.png) y [`entregas/s02/evidencia/memoria.txt`](entregas/s02/evidencia/memoria.txt).
-
-```text
 === INICIANDO CONVERSACIÓN DE 8 TURNOS ===
 
 --- Turno 1 ---
@@ -76,14 +55,4 @@ Modelo  : Sirve para almacenar **variables de entorno y datos sensibles** (como 
 Usuario : ¿Cómo me llamo y cuál es mi color favorito?
 [528 tokens | finish=FinishReason.STOP]
 Modelo  : Te llamas **Edgar** y tu color favorito es el **azul**.
-```
 
-### Por qué elegí ventana deslizante
-
-Elegí guardar solo los últimos mensajes (ventana deslizante) porque es la forma más sencilla y rápida de darle memoria al chat sin complicarnos. Si usáramos otras alternativas, como pedirle a la IA que haga un resumen de la conversación a cada momento, gastaríamos tokens de más y las respuestas tardarían más tiempo. Y usar una base de datos externa para una charla corta era demasiado rollo. Así solo conservamos los últimos turnos en una lista simple: el modelo recuerda lo reciente y evitamos pasarnos del límite de tokens.
-
-### Límite de solicitudes provocado (Paso 9)
-
-Ver evidencia en [`entregas/s02/evidencia/rate_limit.png`](entregas/s02/evidencia/rate_limit.png) y [`entregas/s02/evidencia/rate_limit.txt`](entregas/s02/evidencia/rate_limit.txt).
-
-Provocamos el error 429 a propósito mandando varias preguntas seguidas para superar el límite de 5 peticiones por minuto del plan gratuito. En lugar de que el script se cayera con un error feo, el código atrapó el fallo y fue esperando unos segundos (1s, 2s, 4s...) para reintentar la llamada automáticamente sin romperse.
