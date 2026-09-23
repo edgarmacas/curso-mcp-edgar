@@ -87,3 +87,13 @@ Elegí guardar solo los últimos mensajes (ventana deslizante) porque es la form
 Ver evidencia en [`entregas/s02/evidencia/rate_limit.png`](entregas/s02/evidencia/rate_limit.png) y [`entregas/s02/evidencia/rate_limit.txt`](entregas/s02/evidencia/rate_limit.txt).
 
 Provocamos el error 429 a propósito mandando varias preguntas seguidas para superar el límite de 5 peticiones por minuto del plan gratuito. En lugar de que el script se cayera con un error feo, el código atrapó el fallo y fue esperando unos segundos (1s, 2s, 4s...) para reintentar la llamada automáticamente sin romperse.
+
+---
+
+## Proyecto Integrador — Sesión 10: De la arquitectura a los agentes
+
+Sistema de Gestión de Tareas Personales con Límite de Capacidad (WIP Limits) desarrollado mediante **Spec-Driven Development** con **Spec Kit** y **Google Antigravity**.
+
+* **Código y documentación:** [`proyecto_integrador/proyecto-integrador-speckit/`](proyecto_integrador/proyecto-integrador-speckit/)
+* **Instrucciones de ejecución con `uv`:** [`proyecto_integrador/proyecto-integrador-speckit/README.md`](proyecto_integrador/proyecto-integrador-speckit/README.md)
+* **Evidencias fotográficas (Capturas 1 a 25):** [`proyecto_integrador/evidencias/`](proyecto_integrador/evidencias/)
